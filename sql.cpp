@@ -2,7 +2,7 @@
 
 SQL::SQL()
 {
-    // left blank
+    // left blank 
 }
 
 void SQL::run(){
@@ -13,7 +13,7 @@ void SQL::run(){
     string c1 = "select * from employee";
     string c2 = "select lname, fname, department, salary from employee";
     string c3 = "insert into employee values Hollenbaugh, Allison, CS, 100000";
-    string c4 = "insert into employee values McGee, Tits, Journalism, 50000";
+    string c4 = "insert into employee values McGee, Peeps, Journalism, 50000";
     string c5 = "insert into employee values Van Gogh, Jim Bob, Art, 20000";
     string c6 = "select * from employee";
 

@@ -1,8 +1,10 @@
 #ifndef STOKENIZER_H
 #define STOKENIZER_H
+
 #include <iostream>
-#include "../../../CS8_redo/!includes/state_machine/state_machine.h"
-#include "../../../CS8_redo/!includes/Token/token.h"
+#include "state_machine.h"
+#include "token.h"
+
 using namespace std;
 
 const int MAX_BUFFER = 100;

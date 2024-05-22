@@ -4,13 +4,11 @@
 #include <iostream>
 #include <iomanip>
 //#include <queue>
-
-#include "../../!includes/Table/table.h"
-//#include "../../!includes/Map/map.h"
-#include "../../!includes/STokenizer/stokenizer.h"
-#include "../../!includes/vector/vector.h"
-#include "../../!includes/Parser/parser.h"
-#include "../../!includes/Record/record.h"
+#include "table.h"
+#include "stokenizer.h"
+#include "vector.h"
+#include "parser.h"
+#include "record.h"
 
 using namespace std;
 

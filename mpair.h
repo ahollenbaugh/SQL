@@ -1,9 +1,12 @@
 #ifndef MPAIR_H
 #define MPAIR_H
+
 #include <iostream>
 #include <iomanip>
-#include "../../!includes/vector/vector.h"
+#include "vector.h"
+
 using namespace std;
+
 template <typename K, typename V>
 struct MPair{
     K key;

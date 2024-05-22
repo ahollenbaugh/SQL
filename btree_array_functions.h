@@ -1,8 +1,11 @@
 #ifndef BTREE_ARRAY_FUNCTIONS_H
 #define BTREE_ARRAY_FUNCTIONS_H
+
 #include <iostream>
 #include <iomanip>  // setw
 #include <cassert>  // assert function
+// #include "vector.h" 
+
 using namespace std;
 
 // PROTOTYPES -------------------------------------------------------------------------------------------------------------------
@@ -54,11 +57,15 @@ bool is_le(const T data[], int n, const T& item);
 
 //-------------- Vector Extra operators: ---------------------
 
-template <typename T>
-ostream& operator <<(ostream& outs, const vector<T>& list);
+/* 
+May 21, 2024 - Don't think I need these.
+*/
 
-template <typename T>
-vector<T>& operator +=(vector<T>& list, const T& addme);
+// template <typename T>
+// ostream& operator <<(ostream& outs, const vector<T>& list); 
+
+// template <typename T>
+// vector<T>& operator +=(vector<T>& list, const T& addme);
 
 // --------------------- ordered_insert helper functions ----------------
 
@@ -406,16 +413,34 @@ bool is_le(const T data[], int n, const T& item){
 }
 
 //-------------- Vector Extra operators: ---------------------
+/*
+ May 21, 2024
 
-template <typename T>
-ostream& operator <<(ostream& outs, const vector<T>& list){
-    // print vector list
-}
+ It's been years since I've worked on this project, but I think
+ the two operators below can be omitted for now. As far as I 
+ can tell, my custom Vector class isn't being used anywhere in this 
+ file. If I leave these definitions uncommented, they will 
+ cause an error anyway: 
 
-template <typename T>
-vector<T>& operator +=(vector<T>& list, const T& addme){
-    // list.push_back addme
-}
+ "redefinition of ‘template<class T> std::ostream& operator<<(std::ostream&, const Vector<T>&)’"
+
+ I'm not sure why it originally used the vector class 
+ (lowercase v, from the standard library) -- that's why I 
+ changed it to use my custom one (uppercase V), because 
+ I thought I had made a mistake. Now I don't know what 
+ the deal is anymore.
+
+*/
+
+// template <typename T>
+// ostream& operator <<(ostream& outs, const vector<T>& list){
+//     // print vector list
+// }
+
+// template <typename T>
+// vector<T>& operator +=(vector<T>& list, const T& addme){
+//     // list.push_back addme
+// }
 
 // --------------------- ordered_insert helper functions ----------------
 

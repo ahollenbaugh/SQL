@@ -1,5 +1,6 @@
 #ifndef STATE_MACHINE_H
 #define STATE_MACHINE_H
+
 const int MAX_ROWS = 256;
 const int MAX_COLUMNS = 256;
 //const int MAX_ROWS = 10;

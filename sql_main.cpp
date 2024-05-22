@@ -1,5 +1,6 @@
 #include <iostream>
-#include "../../!includes/SQL/sql.h"
+#include "sql.h"
+
 using namespace std;
 
 int main()

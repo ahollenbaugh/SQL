@@ -1,8 +1,9 @@
 #ifndef MAP_H
 #define MAP_H
-//#include "../../!includes/btree/btree.h"
-#include "../../!includes/BPlusTree/bplustree.h"
-#include "../../!includes/Pair/pair.h"
+
+#include "bplustree.h"
+#include "pair.h"
+
 template <typename K, typename V>
 class Map
 {

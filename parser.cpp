@@ -1,3 +1,4 @@
+#include <cstring>
 #include "parser.h"
 
 Parser::Parser()

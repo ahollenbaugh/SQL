@@ -1,10 +1,13 @@
 #ifndef VECTOR_H
 #define VECTOR_H
+
 #include <iostream>
 #include <iomanip>
 #include <cassert>
-#include "../../!includes/vector_lower_level_functions/vector_lower_level_functions.h"
+#include "vector_lower_level_functions.h"
+
 using namespace std;
+
 template <class T>
 class Vector
 {

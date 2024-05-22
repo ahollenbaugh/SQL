@@ -1,9 +1,11 @@
 #ifndef BPLUSTREE_H
 #define BPLUSTREE_H
+
 #include <iostream>
 #include <iomanip> // setw
 #include <stack>
-#include "../../!includes/btree_array_functions/btree_array_functions.h"
+#include "btree_array_functions.h"
+
 using namespace std;
 
 // PROTOTYPES -------------------------------------------------------------------------------------------------------

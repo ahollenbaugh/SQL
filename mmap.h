@@ -1,8 +1,8 @@
 #ifndef MMAP_H
 #define MMAP_H
 
-#include "../../!includes/BPlusTree/bplustree.h"
-#include "../../!includes/mpair/mpair.h"
+#include "bplustree.h"
+#include "mpair.h"
 
 template <typename K, typename V>
 class MMap

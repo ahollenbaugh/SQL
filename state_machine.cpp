@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <cassert>
-#include "../../../CS8_redo/!includes/state_machine/state_machine.h"
+#include "state_machine.h"
+#include <string.h>
 
 using namespace std;
 

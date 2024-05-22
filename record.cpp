@@ -22,12 +22,22 @@ long Record::read(fstream &ins, long recno){
     return ins.gcount();
     // gcount returns number of characters in stream
 }
-template <class T>
-ostream& operator<<(ostream& outs, const vector<T>& v){
-    for (int i= 0; i<v.size(); i++)
-        outs<<v[i]<<" ";
-    return outs;
-}
+
+/*
+May 21, 2024
+
+Not sure why we're redefining the insertion operator
+for the Vector class here, but I think it's safe 
+to omit it for now.
+*/
+
+// template <class T>
+// ostream& operator<<(ostream& outs, const vector<T>& v){
+//     for (int i= 0; i<v.size(); i++)
+//         outs<<v[i]<<" ";
+//     return outs;
+// }
+
 ostream& operator<<(ostream& outs,
                     const Record& r){
     for (int i=0; i<r.ROW_MAX; i++)
@@ -50,28 +60,36 @@ bool file_exists(const char filename[]){
     return true;
 }
 
-void open_fileRW(fstream& f, const char filename[]) throw(char*){
+void open_fileRW(fstream& f, const char filename[]){
     const bool debug = false;
     //openning a nonexistent file for in|out|app causes a fail()
     //  so, if the file does not exist, create it by openning it for
     //  output:
-    if (!file_exists(filename)){
-        f.open(filename, std::fstream::out|std::fstream::binary);
-        if (f.fail()){
-            cout<<"file open (RW) failed: with out|"<<filename<<"]"<<endl;
-            throw("file RW failed  ");
-        }
+    try
+    {
+        if (!file_exists(filename)){
+            f.open(filename, std::fstream::out|std::fstream::binary);
+            if (f.fail()){
+                cout<<"file open (RW) failed: with out|"<<filename<<"]"<<endl;
+                throw("file RW failed  ");
+            }
         else{
             if (debug) cout<<"open_fileRW: file created successfully: "<<filename<<endl;
         }
-    }
-    else{
-        f.open (filename, std::fstream::in | std::fstream::out| std::fstream::binary );
-        if (f.fail()){
-            cout<<"file open (RW) failed. ["<<filename<<"]"<<endl;
-            throw("file failed to open.");
+        }
+        else{
+            f.open (filename, std::fstream::in | std::fstream::out| std::fstream::binary );
+            if (f.fail()){
+                cout<<"file open (RW) failed. ["<<filename<<"]"<<endl;
+                throw("file failed to open.");
+            }
         }
     }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 
 }
 void open_fileW(fstream& f, const char filename[]){

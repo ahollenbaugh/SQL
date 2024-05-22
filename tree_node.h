@@ -1,7 +1,10 @@
 #ifndef TREE_NODE_H
 #define TREE_NODE_H
+
 #include <iostream>
+
 using namespace std;
+
 template <typename T>
 struct tree_node{
     T _item;

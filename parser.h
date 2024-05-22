@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <queue>
-#include "../../!includes/STokenizer/stokenizer.h"
-#include "../../!includes/vector/vector.h"
-#include "../../!includes/Map/map.h"
-#include "../../!includes/state_machine/state_machine.h"
-#include "../../!includes/mmap/mmap.h"
+#include "stokenizer.h"
+#include "vector.h"
+#include "map.h"
+#include "state_machine.h"
+#include "mmap.h"
 
 using namespace std;
 

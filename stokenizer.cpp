@@ -1,3 +1,5 @@
+#include <cstring>
+#include <string.h>
 #include "stokenizer.h"
 
 // In the stokenizer.cpp, you must reintroduce the _table static member variable once again:

@@ -4,11 +4,11 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include "../../!includes/Map/map.h"
-#include "../../!includes/mmap/mmap.h"
-#include "../../!includes/Record/record.h"
-#include "../../!includes/vector/vector.h"
-#include "../../!includes/Parser/parser.h"
+#include "map.h"
+#include "mmap.h"
+#include "record.h"
+#include "vector.h"
+#include "parser.h"
 
 using namespace std;
 
